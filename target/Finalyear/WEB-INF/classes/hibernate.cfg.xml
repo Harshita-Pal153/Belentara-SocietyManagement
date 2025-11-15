@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-configuration>
+	<session-factory>
+		<!-- JDBC Settings -->
+		<property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3307/finalyear</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">KUKI@pal153</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+
+		<!-- Connection Pool Settings -->
+		<property name="hibernate.c3p0.min_size">5</property>
+		<property name="hibernate.c3p0.max_size">20</property>
+		<property name="hibernate.c3p0.timeout">300</property>
+		<property name="hibernate.c3p0.max_statements">50</property>
+		<property name="hibernate.c3p0.idle_test_period">3000</property>
+
+		<!-- Specify the current session context -->
+		<property name="hibernate.current_session_context_class">thread</property>
+
+		<!-- SQL Formatting -->
+		<property name="hibernate.format_sql">true</property>
+		<property name="hibernate.use_sql_comments">true</property>
+
+		<!-- Entity Mappings -->
+		<mapping class="societymanagement.Member" />
+		<mapping class="societymanagement.Event" />
+		<mapping class="societymanagement.MaintenanceCharges" />
+		<mapping class="societymanagement.Notice" />
+		<mapping class="societymanagement.ResidentProfile" />
+		<mapping class="societymanagement.Message" />
+
+	</session-factory>
+</hibernate-configuration>
+
+
+
